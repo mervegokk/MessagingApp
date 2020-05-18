@@ -6,7 +6,7 @@ namespace MessaginApp.API.Models
    public string userName { get; set; }
    public byte[] passwordHash { get; set; }
 
-   public byte[] passworSalt { get; set; }
+   public byte[] passwordSalt { get; set; }
    
    
     }

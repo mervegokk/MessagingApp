@@ -23,11 +23,10 @@ namespace MessaginApp.API.Controllers
         [HttpGet]
         public async Task<IActionResult> Get()
         {
+            var users = await _context.Users.ToListAsync();
+           
            var values = await _context.Values.ToListAsync();
             return Ok(values);
-          /*  var users = await _context.Users.ToListAsync();
-            return Ok(users);*/
-            
 
         }
 

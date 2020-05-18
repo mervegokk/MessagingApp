@@ -31,6 +31,8 @@ namespace MessaginApp.API
             (Configuration.GetConnectionString("DefaultConnection")));
             
             services.AddControllers();
+            
+        
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
