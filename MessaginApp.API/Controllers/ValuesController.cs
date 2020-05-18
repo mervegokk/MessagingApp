@@ -31,7 +31,7 @@ namespace MessaginApp.API.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(int id)
         {
-            var value = await _context.Values.FirstOrDefaultAsync(x=>x.Id==id);
+            var value = await _context.Values.FirstOrDefaultAsync(x=>x.id==id);
             return Ok(value);
         }
 
