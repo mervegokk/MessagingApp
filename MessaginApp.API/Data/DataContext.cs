@@ -8,6 +8,7 @@ namespace MessaginApp.API.Data
     {
         public DataContext(DbContextOptions<DataContext> options) : base(options)
         {
+        
         }
        
        

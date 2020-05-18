@@ -12,8 +12,8 @@ namespace MessaginApp.API.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
-        private readonly DataContext _context;
-
+       private readonly DataContext _context;
+      
         public ValuesController(DataContext context)
         {
             _context = context;
@@ -23,8 +23,11 @@ namespace MessaginApp.API.Controllers
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-            var values = await _context.Values.ToListAsync();
-            return Ok(values);
+           /* var values = await _context.Values.ToListAsync();
+            return Ok(values);*/
+            var users = await _context.Users.ToListAsync();
+            return Ok(users);
+
         }
 
         // GET api/values/5
