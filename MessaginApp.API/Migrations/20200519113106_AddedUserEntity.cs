@@ -23,9 +23,9 @@ namespace MessaginApp.API.Migrations
                 {
                     id = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    userName = table.Column<string>(nullable: true),
+                    username = table.Column<string>(nullable: true),
                     passwordHash = table.Column<byte[]>(nullable: true),
-                    passworSalt = table.Column<byte[]>(nullable: true)
+                    passwordSalt = table.Column<byte[]>(nullable: true)
                 },
                 constraints: table =>
                 {

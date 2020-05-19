@@ -22,13 +22,13 @@ namespace MessaginApp.API.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<byte[]>("passworSalt")
-                        .HasColumnType("BLOB");
-
                     b.Property<byte[]>("passwordHash")
                         .HasColumnType("BLOB");
 
-                    b.Property<string>("userName")
+                    b.Property<byte[]>("passwordSalt")
+                        .HasColumnType("BLOB");
+
+                    b.Property<string>("username")
                         .HasColumnType("TEXT");
 
                     b.HasKey("id");

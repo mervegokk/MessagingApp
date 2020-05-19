@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MessaginApp.API.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20200518164010_AddedUserEntity")]
+    [Migration("20200519113106_AddedUserEntity")]
     partial class AddedUserEntity
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -24,13 +24,13 @@ namespace MessaginApp.API.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<byte[]>("passworSalt")
-                        .HasColumnType("BLOB");
-
                     b.Property<byte[]>("passwordHash")
                         .HasColumnType("BLOB");
 
-                    b.Property<string>("userName")
+                    b.Property<byte[]>("passwordSalt")
+                        .HasColumnType("BLOB");
+
+                    b.Property<string>("username")
                         .HasColumnType("TEXT");
 
                     b.HasKey("id");
