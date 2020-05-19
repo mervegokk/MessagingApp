@@ -25,7 +25,7 @@ namespace MessaginApp.API.Data
         }
 
         
-        private bool VerifyPassword(string password, byte[] passwordSalt, byte[] passwordHash)
+        private bool VerifyPassword(string password,  byte[] passwordHash ,byte[] passwordSalt)
         {
               using( var hmac=new System.Security.Cryptography.HMACSHA512(passwordSalt)){
                 
