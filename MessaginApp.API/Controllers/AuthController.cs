@@ -57,7 +57,7 @@ namespace MessaginApp.API.Controllers
         }
 
         [HttpPost("login")]
-        public async Task<IActionResult> Login(UserForLoginDtos userForLogin)
+        public async Task<IActionResult> Login([FromBody]UserForLoginDtos userForLogin)
         {
             var userFromRepo = await _repo.Login(userForLogin.Username, userForLogin.Password);
             if (userFromRepo == null)
