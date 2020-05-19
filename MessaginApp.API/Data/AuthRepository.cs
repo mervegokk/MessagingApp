@@ -14,7 +14,7 @@ namespace MessaginApp.API.Data
 
        public async Task<User> Login(string username, string password)
         {
-         var user =await _context.Users.FirstOrDefaultAsync(x=>x.userName==username);
+         var user =await _context.Users.FirstOrDefaultAsync(x=>x.username==username);
          if (user==null)
          return null;
         if(!VerifyPassword(password, user.passwordHash , user.passwordSalt))
@@ -72,7 +72,7 @@ namespace MessaginApp.API.Data
 
         public async Task<bool> UserExists(string username)
         {
-            if(await _context.Users.AnyAsync(x=>x.userName==username))
+            if(await _context.Users.AnyAsync(x=>x.username==username))
             return true;
 
             return false;

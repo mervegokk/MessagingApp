@@ -29,6 +29,10 @@ namespace MessaginApp.API
         {
             services.AddDbContext<DataContext>(x=>x.UseSqlite
             (Configuration.GetConnectionString("DefaultConnection")));
+
+            //Scoped: Bu yaşam tipi ile bir objeyi register ettiğimizde, Container bize ilgili Request sonlana kadar aynı objeyi verir, yeni bir request geldiğinde yeni bir obje oluşturulur.
+            //Transient  -Singleton türleride vardır.
+            services.AddScoped<IAuthRepository,AuthRepository>();
             
             services.AddControllers();
             
