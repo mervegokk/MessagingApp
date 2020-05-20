@@ -49,7 +49,7 @@ namespace MessaginApp.API
                 }
                 );
             
-        
+          //services.AddCors();
             
         
         }
@@ -64,7 +64,7 @@ namespace MessaginApp.API
 
             //app.UseHttpsRedirection();
 
-           app.UseCors(x=>x.AllowAnyOrigin().AllowAnyMethod());
+           app.UseCors(x=>x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 
             app.UseRouting();
 
